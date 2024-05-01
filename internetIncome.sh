@@ -421,6 +421,7 @@ start_containers() {
     if [ "$container_pulled" = false ]; then
       echo -e "${RED}BitPing Node is not enabled. Ignoring BitPing..${NOCOLOUR}"
     fi
+  sleep 2m
   fi
 
   # Starting Grass container
@@ -457,6 +458,7 @@ start_containers() {
     if [ "$container_pulled" = false ]; then
       echo -e "${RED}Repocket Email or Api is not configured. Ignoring Repocket..${NOCOLOUR}"
     fi
+  sleep 2m
   fi
 
   # Starting Earn Fm container
@@ -475,6 +477,7 @@ start_containers() {
     if [ "$container_pulled" = false ]; then
       echo -e "${RED}EarnFm Api is not configured. Ignoring EarnFm..${NOCOLOUR}"
     fi
+  sleep 2m
   fi
 
   # Starting Gaganode container
@@ -555,6 +558,7 @@ start_containers() {
     if [ "$container_pulled" = false ]; then
       echo -e "${RED}Proxyrack is not enabled. Ignoring Proxyrack..${NOCOLOUR}"
     fi
+  sleep 2m
   fi
 
   # Starting IPRoyals pawns container
