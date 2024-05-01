@@ -403,6 +403,7 @@ start_containers() {
   
   # Starting BitPing container
   if [[ $BITPING_EMAIL && $BITPING_PASSWORD ]]; then
+    sleep 2m
     echo -e "${GREEN}Starting Bitping container..${NOCOLOUR}"
     if [ "$container_pulled" = false ]; then
       sudo docker pull bitping/bitpingd:latest
@@ -421,7 +422,6 @@ start_containers() {
     if [ "$container_pulled" = false ]; then
       echo -e "${RED}BitPing Node is not enabled. Ignoring BitPing..${NOCOLOUR}"
     fi
-  sleep 2m
   fi
 
   # Starting Grass container
@@ -444,6 +444,7 @@ start_containers() {
 
   # Starting Repocket container
   if [[ $REPOCKET_EMAIL && $REPOCKET_API ]]; then
+    sleep 2m
     echo -e "${GREEN}Starting Repocket container..${NOCOLOUR}"
     if [ "$container_pulled" = false ]; then
       sudo docker pull repocket/repocket
@@ -458,7 +459,6 @@ start_containers() {
     if [ "$container_pulled" = false ]; then
       echo -e "${RED}Repocket Email or Api is not configured. Ignoring Repocket..${NOCOLOUR}"
     fi
-  sleep 2m
   fi
 
   # Starting Earn Fm container
@@ -528,6 +528,7 @@ start_containers() {
 
   # Starting ProxyRack container
   if [ "$PROXYRACK" = true ]; then
+    sleep 2m
     echo -e "${GREEN}Starting Proxyrack container..${NOCOLOUR}"
     echo -e "${GREEN}Copy the following node uuid and paste in your proxyrack dashboard${NOCOLOUR}"
     echo -e "${GREEN}You will also find the uuids in the file $proxyrack_file in the same folder${NOCOLOUR}"
@@ -558,7 +559,6 @@ start_containers() {
     if [ "$container_pulled" = false ]; then
       echo -e "${RED}Proxyrack is not enabled. Ignoring Proxyrack..${NOCOLOUR}"
     fi
-  sleep 2m
   fi
 
   # Starting IPRoyals pawns container
