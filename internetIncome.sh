@@ -404,7 +404,7 @@ start_containers() {
   # Starting BitPing container
   if [[ $BITPING_EMAIL && $BITPING_PASSWORD ]]; then
     echo -e "${GREEN}Starting Bitping container..${NOCOLOUR}"
-    sleep 4m
+    sleep 1s
     if [ "$container_pulled" = false ]; then
       sudo docker pull bitping/bitpingd:latest
     fi 
@@ -445,7 +445,7 @@ start_containers() {
   # Starting Repocket container
   if [[ $REPOCKET_EMAIL && $REPOCKET_API ]]; then
     echo -e "${GREEN}Starting Repocket container..${NOCOLOUR}"
-    sleep 4m
+    sleep 1s
     if [ "$container_pulled" = false ]; then
       sudo docker pull repocket/repocket
     fi
@@ -464,7 +464,7 @@ start_containers() {
   # Starting Earn Fm container
   if [[ $EARN_FM_API ]]; then
     echo -e "${GREEN}Starting EarnFm container..${NOCOLOUR}"
-    sleep 4m
+    sleep 1s
     if [ "$container_pulled" = false ]; then
       sudo docker pull earnfm/earnfm-client:latest
     fi
@@ -531,7 +531,7 @@ start_containers() {
     echo -e "${GREEN}Starting Proxyrack container..${NOCOLOUR}"
     echo -e "${GREEN}Copy the following node uuid and paste in your proxyrack dashboard${NOCOLOUR}"
     echo -e "${GREEN}You will also find the uuids in the file $proxyrack_file in the same folder${NOCOLOUR}"
-    sleep 4m
+    sleep 1s
     if [ "$container_pulled" = false ]; then
       sudo docker pull --platform=linux/amd64 proxyrack/pop
     fi
@@ -641,7 +641,7 @@ start_containers() {
   # Starting Proxylite container
   if [[ $PROXYLITE_USER_ID ]]; then
     echo -e "${GREEN}Starting Proxylite container..${NOCOLOUR}"
-    sleep 4m
+    sleep 1s
     if [ "$container_pulled" = false ]; then
       sudo docker pull proxylite/proxyservice     
     fi
